@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, MessageCircle, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 
 const projects = [
   { id: 1, name: "Da Mario", sector: "Ristorazione", tag: "01", description: "Menù digitale e prenotazioni online per pizzeria artigianale", metric: "+45% prenotazioni" },
@@ -58,13 +58,11 @@ const Index = () => {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:morphwebstudio@gmail.com"
                 className="inline-flex h-11 items-center gap-2 rounded-full border border-primary-foreground/20 px-7 text-sm font-medium text-primary-foreground/70 transition-all hover:border-accent hover:text-accent"
               >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
+                <Mail className="h-4 w-4" />
+                Email
               </a>
             </div>
           </div>
