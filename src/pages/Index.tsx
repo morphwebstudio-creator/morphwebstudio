@@ -158,7 +158,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
           {/* Left — Copy with Bodoni Moda */}
-          <div className="flex flex-col justify-center bg-muted px-8 md:px-16 py-20 relative">
+          <div className="flex flex-col justify-center bg-secondary px-8 md:px-16 py-20 relative">
             <svg className="absolute -left-10 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
             </svg>
@@ -185,14 +185,14 @@ const Index = () => {
           </div>
 
           {/* Right — Calendly embed */}
-          <div className="flex flex-col justify-center bg-accent/15 px-8 md:px-16 py-20">
-            <h3 className="text-2xl font-bold text-foreground mb-2">Scegli un orario</h3>
-            <p className="text-sm text-muted-foreground mb-8">
+          <div className="flex flex-col justify-center bg-foreground px-8 md:px-16 py-20">
+            <h3 className="text-2xl font-bold text-primary-foreground mb-2">Scegli un orario</h3>
+            <p className="text-sm text-primary-foreground/60 mb-8">
               Seleziona data e ora che preferisci — la call dura 15 minuti.
             </p>
             <div className="w-full rounded-lg overflow-hidden bg-background shadow-lg" style={{ minHeight: 580 }}>
               <iframe
-                src="https://calendly.com/morphwebstudio/15min"
+                src="https://calendly.com/morphwebstudio/new-meeting"
                 width="100%"
                 height="580"
                 frameBorder="0"
