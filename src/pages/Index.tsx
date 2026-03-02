@@ -25,7 +25,7 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-5xl">
             {/* Micro label */}
-            <div className="animate-slide-up mb-6">
+            <div className="animate-slide-up mb-10 md:mb-14">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary-foreground/50">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Web Studio — Torino
@@ -40,7 +40,7 @@ const Index = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-8 max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base animate-slide-up" style={{ animationDelay: "0.25s" }}>
+            <p className="mt-10 md:mt-14 max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base animate-slide-up" style={{ animationDelay: "0.25s" }}>
               Creiamo il tuo sito web AI-powered in maniera rapida<br />
               ed efficiente.<br />
               Investi una tantum, hai il sito per sempre
