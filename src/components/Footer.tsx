@@ -14,10 +14,9 @@ const Footer = () => {
             
 
 
-            <p className="mt-3 text-sm text-primary-foreground/70">
-              Siti web professionali per PMI italiane.<br />
-              MVP in 48h. Responsive. Lead-oriented.
-            </p>
+            
+
+
           </div>
 
           {/* Links */}
