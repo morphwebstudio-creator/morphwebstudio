@@ -166,7 +166,7 @@ const Index = () => {
             <h2 style={{ fontFamily: "'Bodoni Moda', serif" }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-foreground">
               Parliamo del<br />
               tuo prossimo<br />
-              <span className="text-accent">progetto.</span>
+              <span className="text-foreground">progetto.</span>
             </h2>
             <p className="mt-6 text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
               Prenota una chiamata gratuita di 15 minuti. Analizzeremo insieme le tue esigenze e ti proporremo la soluzione migliore per il tuo business.
