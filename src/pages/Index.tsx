@@ -15,10 +15,17 @@ const Index = () => {
     <Layout>
       {/* Hero — editorial, oversized type, geometric accents */}
       <section className="relative min-h-[90vh] flex items-center bg-foreground overflow-hidden">
-        {/* Geometric accents */}
-        <div className="geo-circle w-64 h-64 md:w-96 md:h-96 -right-20 top-10 opacity-30" />
-        <div className="geo-circle w-32 h-32 left-[15%] bottom-[10%] opacity-20" />
-        <div className="geo-line w-px h-32 right-[30%] top-0 opacity-20" />
+        {/* MW-inspired decorative curves */}
+        <svg className="absolute -right-20 top-10 w-64 h-64 md:w-96 md:h-96 opacity-20" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 180 Q60 20, 100 100 Q140 180, 180 20" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
+          <path d="M40 180 Q80 40, 120 120 Q160 200, 200 40" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none" />
+        </svg>
+        <svg className="absolute left-[10%] bottom-[8%] w-40 h-40 opacity-15" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 130 Q45 10, 75 75 Q105 140, 140 10" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
+        </svg>
+        <svg className="absolute right-[28%] top-0 w-20 h-32 opacity-15" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 90 Q30 10, 50 50" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none" />
+        </svg>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-5xl">
@@ -149,7 +156,9 @@ const Index = () => {
 
       {/* WhatsApp Lead Form — dark editorial */}
       <section className="bg-foreground py-20 md:py-32 relative overflow-hidden">
-        <div className="geo-circle w-48 h-48 -left-16 top-10 opacity-15" />
+        <svg className="absolute -left-16 top-10 w-48 h-48 opacity-15" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
+        </svg>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="mx-auto max-w-lg">
