@@ -1,34 +1,30 @@
 
 
-# Piano Sito MorphWebStudio
+# Piano: Logo e Forme Decorative Ispirate al Logo MW
 
-## Design System Setup
-Configurazione font (Bodoni Moda + Inter), palette colori (#0A2540, #F59E0B, #64748B, #F1F5F9) nelle variabili CSS e Tailwind. Navbar responsive con logo e link alle 5 pagine, footer riutilizzabile con contatti e link WhatsApp.
+## Cosa fare
 
-## Home Page
-- **Hero section**: Headline "Sito web in 48h per la tua PMI", sottotitolo, bottone CTA arancione (#F59E0B) "Richiedi Preventivo"
-- **Grid 3 progetti featured**: Card con immagine mockup, nome progetto, settore
-- **Form lead WhatsApp**: Nome + telefono + messaggio, invio diretto a WhatsApp
-- **Footer**: Contatti, social, link WhatsApp diretto
+### 1. Copiare i loghi nel progetto
+- `intero.png` → `src/assets/logo-intero.png` (per navbar e footer)
+- `mw.png` → non necessario nel codice, solo reference per le forme
 
-## Progetti
-- Gallery portfolio con card mockup (pizzeria, artigiano, e-commerce)
-- Filtri per settore (tutti, ristorazione, artigianato, retail)
-- Pagina dettaglio case study con metriche (+30% lead, ecc.)
+### 2. Navbar e Footer: logo reale
+- Sostituire il testo "MORPH." con `<img>` del logo `intero.png` in entrambi i componenti
+- Dimensioni: ~140px wide in navbar, ~120px in footer
 
-## Chi Siamo
-- Sezione mission/vision con testo brand identity
-- Bio founder breve
-- Valori (indipendenza, AI, rapidità) con icone
-- CTA "Prenota demo gratuita"
+### 3. Forme decorative ispirate alla silhouette MW
+Le curve del logo MW sono archi fluidi che si incrociano formando una "M" e una "W" con tratti curvi. Attualmente ci sono cerchi (`geo-circle`) e linee verticali (`geo-line`).
 
-## Servizi
-- Elenco servizi con descrizione (siti base, integrazioni, maintenance)
-- Pricing table semplice: 3 colonne (Base 1k€, Pro, Custom)
-- FAQ accordion con domande frequenti
+Sostituire con **curve SVG inline** che richiamano gli archi del logo:
+- Archi parabolici aperti (non cerchi chiusi)
+- Tratti curvi a S che ricordano le onde del logo
+- Stesse proprietà visive attuali: `border-2 border-accent`, opacity bassa (0.15-0.30), posizionamento assoluto
 
-## Contatti
-- Form completo (nome, email, telefono, messaggio) con validazione
-- Mappa embed Torino
-- Link WhatsApp diretto + orari ufficio
+Le forme saranno usate nella hero section e nella sezione WhatsApp form, nelle stesse posizioni dove ora ci sono i cerchi.
+
+### File modificati
+- `src/components/Navbar.tsx` — logo img
+- `src/components/Footer.tsx` — logo img
+- `src/pages/Index.tsx` — SVG decorativi al posto di geo-circle/geo-line
+- `src/index.css` — eventuale rimozione classi geo-circle/geo-line inutilizzate
 
