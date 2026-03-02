@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero — editorial, oversized type, geometric accents */}
-      <section className="relative min-h-[90vh] flex items-center bg-foreground overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-foreground overflow-hidden pb-8">
         {/* Decorative geometric elements */}
         <div className="absolute -right-16 top-16 h-64 w-64 md:h-96 md:w-96 rounded-full border-2 border-accent/20" />
         <div className="absolute -right-8 top-24 h-48 w-48 md:h-72 md:w-72 rounded-full border border-accent/15" />
