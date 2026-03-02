@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import logoIntero from "@/assets/logo-intero.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,9 +66,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 flex items-center justify-between border-t border-primary-foreground/10 pt-6">
-          <span className="font-serif text-sm font-bold text-primary-foreground/40">
-            MORPH<span className="text-accent">.</span>
-          </span>
+          <img src={logoIntero} alt="MorphWebStudio" className="h-5 w-auto opacity-40" />
           <span className="text-xs text-primary-foreground/30">
             © {currentYear} MorphWebStudio
           </span>
