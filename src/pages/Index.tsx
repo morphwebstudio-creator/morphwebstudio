@@ -158,7 +158,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
           {/* Left — Copy with Bodoni Moda */}
-          <div className="flex flex-col justify-center bg-secondary px-8 md:px-16 py-20 relative">
+          <div className="flex flex-col justify-center bg-accent px-8 md:px-16 py-20 relative">
             <svg className="absolute -left-10 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
             </svg>
