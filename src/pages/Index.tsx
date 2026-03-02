@@ -154,19 +154,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* WhatsApp Lead Form — dark editorial */}
-      <section className="bg-foreground py-20 md:py-32 relative overflow-hidden">
-        <svg className="absolute -left-16 top-10 w-48 h-48 opacity-15" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
+      {/* Contact Form — accent background, reference-inspired UI */}
+      <section className="bg-accent py-20 md:py-32 relative overflow-hidden">
+        <svg className="absolute -left-16 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--foreground))" strokeWidth="2" fill="none" />
         </svg>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="mx-auto max-w-lg">
-            <span className="text-xs font-medium uppercase tracking-widest text-primary-foreground/30">Contatto rapido</span>
-            <h2 className="text-display-sm font-serif font-bold text-primary-foreground mt-2">
-              Parliamone<span className="text-accent">.</span>
+          <div className="mx-auto max-w-2xl">
+            <h2 className="font-serif text-4xl md:text-5xl font-black text-accent-foreground">
+              Contattaci<span className="text-foreground">.</span>
             </h2>
-            <p className="mt-3 text-sm text-primary-foreground/50">
+            <p className="mt-3 text-sm text-accent-foreground/70">
               Compila il form — ti rispondiamo su WhatsApp in pochi minuti.
             </p>
 
@@ -175,57 +174,86 @@ const Index = () => {
                 e.preventDefault();
                 const form = e.target as HTMLFormElement;
                 const nome = (form.elements.namedItem("nome") as HTMLInputElement).value.trim();
+                const azienda = (form.elements.namedItem("azienda") as HTMLInputElement).value.trim();
+                const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
                 const telefono = (form.elements.namedItem("telefono") as HTMLInputElement).value.trim();
                 const messaggio = (form.elements.namedItem("messaggio") as HTMLTextAreaElement).value.trim();
                 if (nome && telefono) {
-                  const text = encodeURIComponent(`Ciao, sono ${nome} (${telefono}). ${messaggio}`);
+                  const text = encodeURIComponent(`Ciao, sono ${nome}${azienda ? ` (${azienda})` : ''}${email ? `, email: ${email}` : ''}, tel: ${telefono}. ${messaggio}`);
                   window.open(`https://wa.me/393000000000?text=${text}`, "_blank");
                 }
               }}
-              className="mt-8 space-y-4"
+              className="mt-10 space-y-6"
             >
-              <div>
-                <label htmlFor="nome" className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-primary-foreground/40">Nome</label>
-                <input
-                  id="nome"
-                  name="nome"
-                  type="text"
-                  required
-                  maxLength={100}
-                  className="flex h-11 w-full rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 px-4 text-sm text-primary-foreground placeholder:text-primary-foreground/25 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="Il tuo nome"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="nome" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Nome</label>
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    required
+                    maxLength={100}
+                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    placeholder=""
+                  />
+                </div>
+                <div>
+                  <label htmlFor="azienda" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Azienda</label>
+                  <input
+                    id="azienda"
+                    name="azienda"
+                    type="text"
+                    maxLength={100}
+                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    maxLength={255}
+                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    placeholder=""
+                  />
+                </div>
+                <div>
+                  <label htmlFor="telefono" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Telefono</label>
+                  <input
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    required
+                    maxLength={20}
+                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    placeholder=""
+                  />
+                </div>
               </div>
               <div>
-                <label htmlFor="telefono" className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-primary-foreground/40">Telefono</label>
-                <input
-                  id="telefono"
-                  name="telefono"
-                  type="tel"
-                  required
-                  maxLength={20}
-                  className="flex h-11 w-full rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 px-4 text-sm text-primary-foreground placeholder:text-primary-foreground/25 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="+39 xxx xxx xxxx"
-                />
-              </div>
-              <div>
-                <label htmlFor="messaggio" className="mb-1.5 block text-xs font-medium uppercase tracking-widest text-primary-foreground/40">Messaggio</label>
+                <label htmlFor="messaggio" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Messaggio</label>
                 <textarea
                   id="messaggio"
                   name="messaggio"
-                  rows={3}
+                  rows={5}
                   maxLength={500}
-                  className="flex w-full rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/25 focus:outline-none focus:border-accent transition-colors"
-                  placeholder="Di cosa hai bisogno?"
+                  className="flex w-full border-b-2 border-accent-foreground/20 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
+                  placeholder=""
                 />
               </div>
-              <button
-                type="submit"
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-accent text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-[1.02]"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Invia su WhatsApp
-              </button>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="inline-flex h-12 items-center justify-center gap-2 bg-foreground px-10 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
+                >
+                  Invia
+                </button>
+              </div>
             </form>
           </div>
         </div>
