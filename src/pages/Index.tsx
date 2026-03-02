@@ -40,14 +40,15 @@ const Index = () => {
             {/* Oversized headline */}
             <h1 className="text-display font-serif font-black text-primary-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Sito web in<br />
-              <span className="text-accent">48h</span> per la<br />
+              <span className="text-accent">3 giorni</span> per la<br />
               tua PMI<span className="text-accent">.</span>
             </h1>
 
             {/* Subtitle + CTA row */}
             <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between animate-slide-up" style={{ animationDelay: "0.25s" }}>
               <p className="max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base">
-                Siti professionali, responsive e ottimizzati per artigiani, ristoratori e negozi locali. A partire da 1.000€.
+                Creiamo il tuo sito web AI-powered in maniera rapida<br />
+                ed efficiente. Investi una tantum, hai il sito per sempre
               </p>
               <div className="flex gap-3">
                 <Link
