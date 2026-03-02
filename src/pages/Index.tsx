@@ -15,17 +15,12 @@ const Index = () => {
     <Layout>
       {/* Hero — editorial, oversized type, geometric accents */}
       <section className="relative min-h-[90vh] flex items-center bg-foreground overflow-hidden">
-        {/* MW-inspired decorative curves */}
-        <svg className="absolute -right-20 top-10 w-64 h-64 md:w-96 md:h-96 opacity-20" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 180 Q60 20, 100 100 Q140 180, 180 20" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
-          <path d="M40 180 Q80 40, 120 120 Q160 200, 200 40" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none" />
-        </svg>
-        <svg className="absolute left-[10%] bottom-[8%] w-40 h-40 opacity-15" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 130 Q45 10, 75 75 Q105 140, 140 10" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
-        </svg>
-        <svg className="absolute right-[28%] top-0 w-20 h-32 opacity-15" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 90 Q30 10, 50 50" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none" />
-        </svg>
+        {/* Decorative geometric elements */}
+        <div className="absolute -right-16 top-16 h-64 w-64 md:h-96 md:w-96 rounded-full border-2 border-accent/20" />
+        <div className="absolute -right-8 top-24 h-48 w-48 md:h-72 md:w-72 rounded-full border border-accent/15" />
+        <div className="absolute right-[20%] top-0 w-[2px] h-32 bg-accent/15" />
+        <div className="absolute left-[10%] bottom-[10%] h-40 w-40 rounded-full border-2 border-accent/15" />
+        <div className="absolute right-[30%] bottom-[5%] w-[2px] h-20 bg-accent/10" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-5xl">
@@ -44,33 +39,33 @@ const Index = () => {
               tua PMI<span className="text-accent">.</span>
             </h1>
 
-            {/* Subtitle + CTA row */}
-            <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between animate-slide-up" style={{ animationDelay: "0.25s" }}>
-              <p className="max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base">
-                Creiamo il tuo sito web AI-powered in maniera rapida<br />
-                ed efficiente.<br />
-                Investi una tantum, hai il sito per sempre
-              </p>
-              <div className="flex gap-3">
-                <a
-                  href="https://calendly.com/morphwebstudio/new-meeting"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-105"
-                >
-                  Preventivo
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-11 items-center gap-2 rounded-full border border-primary-foreground/20 px-7 text-sm font-medium text-primary-foreground/70 transition-all hover:border-accent hover:text-accent"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
-                </a>
-              </div>
+            {/* Subtitle */}
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base animate-slide-up" style={{ animationDelay: "0.25s" }}>
+              Creiamo il tuo sito web AI-powered in maniera rapida<br />
+              ed efficiente.<br />
+              Investi una tantum, hai il sito per sempre
+            </p>
+
+            {/* CTA buttons */}
+            <div className="mt-6 flex gap-3 animate-slide-up" style={{ animationDelay: "0.35s" }}>
+              <a
+                href="https://calendly.com/morphwebstudio/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-105"
+              >
+                Preventivo
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2 rounded-full border border-primary-foreground/20 px-7 text-sm font-medium text-primary-foreground/70 transition-all hover:border-accent hover:text-accent"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </a>
             </div>
           </div>
 
