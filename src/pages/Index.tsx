@@ -22,7 +22,7 @@ const Index = () => {
         <div className="absolute left-[10%] bottom-[10%] h-40 w-40 rounded-full border-2 border-accent/15" />
         <div className="absolute right-[30%] bottom-[5%] w-[2px] h-20 bg-accent/10" />
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 pt-20 md:pt-28">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 pt-10 md:pt-16">
           <div className="max-w-5xl">
             {/* Micro label */}
             <div className="animate-slide-up mb-10 md:mb-14">
