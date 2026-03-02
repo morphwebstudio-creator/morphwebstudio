@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoIntero from "@/assets/logo-intero.png";
 
 const navItems = [
 { label: "Home", path: "/" },
@@ -20,9 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 bg-black">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-          <span className="font-serif text-xl font-bold tracking-tight text-foreground">
-            Morph<span className="text-accent">Web</span>Studio
-          </span>
+          <img src={logoIntero} alt="MorphWebStudio" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
