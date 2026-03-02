@@ -154,107 +154,52 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Form — accent background, reference-inspired UI */}
-      <section className="bg-accent py-20 md:py-32 relative overflow-hidden">
-        <svg className="absolute -left-16 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--foreground))" strokeWidth="2" fill="none" />
-        </svg>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="mx-auto max-w-2xl">
-            <h2 className="font-serif text-4xl md:text-5xl font-black text-accent-foreground">
-              Contattaci<span className="text-foreground">.</span>
+      {/* Contact — split layout inspired by reference */}
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
+          {/* Left — Copy with Bodoni Moda */}
+          <div className="flex flex-col justify-center bg-muted px-8 md:px-16 py-20 relative">
+            <svg className="absolute -left-10 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
+            </svg>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-6">Prenota una call</span>
+            <h2 style={{ fontFamily: "'Bodoni Moda', serif" }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-foreground">
+              Parliamo del<br />
+              tuo prossimo<br />
+              <span className="text-accent">progetto.</span>
             </h2>
-            <p className="mt-3 text-sm text-accent-foreground/70">
-              Compila il form — ti rispondiamo su WhatsApp in pochi minuti.
+            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
+              Prenota una chiamata gratuita di 15 minuti. Analizzeremo insieme le tue esigenze e ti proporremo la soluzione migliore per il tuo business.
             </p>
+            <div className="mt-8 flex items-center gap-4">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Oppure scrivici su WhatsApp
+              </a>
+            </div>
+          </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const form = e.target as HTMLFormElement;
-                const nome = (form.elements.namedItem("nome") as HTMLInputElement).value.trim();
-                const azienda = (form.elements.namedItem("azienda") as HTMLInputElement).value.trim();
-                const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
-                const telefono = (form.elements.namedItem("telefono") as HTMLInputElement).value.trim();
-                const messaggio = (form.elements.namedItem("messaggio") as HTMLTextAreaElement).value.trim();
-                if (nome && telefono) {
-                  const text = encodeURIComponent(`Ciao, sono ${nome}${azienda ? ` (${azienda})` : ''}${email ? `, email: ${email}` : ''}, tel: ${telefono}. ${messaggio}`);
-                  window.open(`https://wa.me/393000000000?text=${text}`, "_blank");
-                }
-              }}
-              className="mt-10 space-y-6"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="nome" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Nome</label>
-                  <input
-                    id="nome"
-                    name="nome"
-                    type="text"
-                    required
-                    maxLength={100}
-                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                    placeholder=""
-                  />
-                </div>
-                <div>
-                  <label htmlFor="azienda" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Azienda</label>
-                  <input
-                    id="azienda"
-                    name="azienda"
-                    type="text"
-                    maxLength={100}
-                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                    placeholder=""
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    maxLength={255}
-                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                    placeholder=""
-                  />
-                </div>
-                <div>
-                  <label htmlFor="telefono" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Telefono</label>
-                  <input
-                    id="telefono"
-                    name="telefono"
-                    type="tel"
-                    required
-                    maxLength={20}
-                    className="flex h-12 w-full border-b-2 border-accent-foreground/20 bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-                    placeholder=""
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="messaggio" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-accent-foreground/80">Messaggio</label>
-                <textarea
-                  id="messaggio"
-                  name="messaggio"
-                  rows={5}
-                  maxLength={500}
-                  className="flex w-full border-b-2 border-accent-foreground/20 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
-                  placeholder=""
-                />
-              </div>
-              <div className="flex justify-end">
-                <button
-                  type="submit"
-                  className="inline-flex h-12 items-center justify-center gap-2 bg-foreground px-10 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
-                >
-                  Invia
-                </button>
-              </div>
-            </form>
+          {/* Right — Calendly embed */}
+          <div className="flex flex-col justify-center bg-accent/15 px-8 md:px-16 py-20">
+            <h3 className="text-2xl font-bold text-foreground mb-2">Scegli un orario</h3>
+            <p className="text-sm text-muted-foreground mb-8">
+              Seleziona data e ora che preferisci — la call dura 15 minuti.
+            </p>
+            <div className="w-full rounded-lg overflow-hidden bg-background shadow-lg" style={{ minHeight: 580 }}>
+              <iframe
+                src="https://calendly.com/morphwebstudio/15min"
+                width="100%"
+                height="580"
+                frameBorder="0"
+                title="Prenota una call"
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
