@@ -52,13 +52,15 @@ const Index = () => {
                 Investi una tantum, hai il sito per sempre
               </p>
               <div className="flex gap-3">
-                <Link
-                  to="/contatti"
+                <a
+                  href="https://calendly.com/morphwebstudio/new-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-105"
                 >
                   Preventivo
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <a
                   href={whatsappLink}
                   target="_blank"

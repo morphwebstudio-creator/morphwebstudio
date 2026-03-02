@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link
               to={item.path}
               className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-accent",
+                "rounded-md px-3 py-2 text-sm font-serif font-medium transition-colors hover:text-accent",
                 location.pathname === item.path ?
                 "text-accent" :
                 "text-muted-foreground"
@@ -42,12 +42,13 @@ const Navbar = () => {
             </li>
           )}
           <li className="ml-3">
-            <Link
-              to="/contatti"
-              className="inline-flex h-9 items-center rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-
+            <a
+              href="https://calendly.com/morphwebstudio/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-9 items-center rounded-md bg-accent px-4 text-sm font-serif font-semibold text-accent-foreground transition-opacity hover:opacity-90">
               Richiedi Preventivo
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -71,24 +72,24 @@ const Navbar = () => {
               to={item.path}
               onClick={() => setIsOpen(false)}
               className={cn(
-                "block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-accent",
+                "block rounded-md px-3 py-2 text-sm font-serif font-medium transition-colors hover:text-accent",
                 location.pathname === item.path ?
                 "text-accent" :
                 "text-muted-foreground"
               )}>
-
                   {item.label}
                 </Link>
               </li>
           )}
             <li className="mt-2">
-              <Link
-              to="/contatti"
+              <a
+              href="https://calendly.com/morphwebstudio/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
-              className="block rounded-md bg-accent px-3 py-2 text-center text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-
+              className="block rounded-md bg-accent px-3 py-2 text-center text-sm font-serif font-semibold text-accent-foreground transition-opacity hover:opacity-90">
                 Richiedi Preventivo
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
