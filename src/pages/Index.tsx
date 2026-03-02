@@ -161,13 +161,13 @@ const Index = () => {
             <svg className="absolute -left-10 top-10 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 170 Q60 20, 100 100 Q140 180, 180 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" />
             </svg>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-6">Prenota una call</span>
-            <h2 style={{ fontFamily: "'Bodoni Moda', serif" }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-foreground">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#000000] mb-6">Prenota una call</span>
+            <h2 style={{ fontFamily: "'Bodoni Moda', serif" }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-[#000000]">
               Parliamo del<br />
               tuo prossimo<br />
-              <span className="text-foreground">progetto.</span>
+              <span className="text-[#000000]">progetto.</span>
             </h2>
-            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
+            <p className="mt-6 text-sm md:text-base text-[#000000] leading-relaxed max-w-md">
               Prenota una chiamata gratuita di 15 minuti. Analizzeremo insieme le tue esigenze e ti proporremo la soluzione migliore per il tuo business.
             </p>
             <div className="mt-8 flex items-center gap-4">
