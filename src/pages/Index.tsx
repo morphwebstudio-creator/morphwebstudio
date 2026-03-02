@@ -36,7 +36,7 @@ const Index = () => {
             <h1 className="text-display font-serif font-black text-primary-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Sito web in<br />
               <span className="text-accent">3 giorni</span> per la<br />
-              tua PMI<span className="text-accent">.</span>
+              tua azienda<span className="text-accent">.</span>
             </h1>
 
             {/* Subtitle */}
