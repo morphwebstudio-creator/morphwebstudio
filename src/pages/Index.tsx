@@ -48,7 +48,8 @@ const Index = () => {
             <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between animate-slide-up" style={{ animationDelay: "0.25s" }}>
               <p className="max-w-md text-sm leading-relaxed text-primary-foreground/50 md:text-base">
                 Creiamo il tuo sito web AI-powered in maniera rapida<br />
-                ed efficiente. Investi una tantum, hai il sito per sempre
+                ed efficiente.<br />
+                Investi una tantum, hai il sito per sempre
               </p>
               <div className="flex gap-3">
                 <Link
