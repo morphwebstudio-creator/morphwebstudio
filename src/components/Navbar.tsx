@@ -47,7 +47,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-9 items-center rounded-md bg-accent px-4 text-sm font-serif font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-              Richiedi Preventivo
+              Inizia Ora
             </a>
           </li>
         </ul>
@@ -88,7 +88,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="block rounded-md bg-accent px-3 py-2 text-center text-sm font-serif font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-                Richiedi Preventivo
+                Inizia Ora
               </a>
             </li>
           </ul>
