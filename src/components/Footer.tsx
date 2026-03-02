@@ -42,8 +42,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:info@morphwebstudio.it" className="transition-colors hover:text-accent">
-                  info@morphwebstudio.it
+                <a href="mailto:morphwebstudio@gmail.com" className="transition-colors hover:text-accent">
+                  morphwebstudio@gmail.com
                 </a>
               </li>
               <li>
