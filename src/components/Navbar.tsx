@@ -6,7 +6,7 @@ import logoIntero from "@/assets/logo-intero.png";
 
 const navItems = [
 { label: "Home", path: "/" },
-{ label: "Servizi", path: "/servizi" },
+{ label: "Soluzione AI", path: "/servizi" },
 { label: "Progetti", path: "/progetti" },
 
 { label: "Contatti", path: "/contatti" }];
