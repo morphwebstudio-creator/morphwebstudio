@@ -1,30 +1,57 @@
+## Piano: Sostituire "Servizi" con "La Nostra Soluzione AI"
 
+### Modifiche
 
-# Piano: Logo e Forme Decorative Ispirate al Logo MW
+**1. Navbar (`src/components/Navbar.tsx`)**
 
-## Cosa fare
+- Cambiare label da "Servizi" a ""Soluzione AI" 
 
-### 1. Copiare i loghi nel progetto
-- `intero.png` → `src/assets/logo-intero.png` (per navbar e footer)
-- `mw.png` → non necessario nel codice, solo reference per le forme
+**2. Pagina Servizi → Soluzione AI (`src/pages/Servizi.tsx`)**
+Riscrittura completa con tre sezioni alternate (sinistra-destra-sinistra), elementi decorativi geometrici coerenti con la home (cerchi, linee accent), e CTA Calendly.
 
-### 2. Navbar e Footer: logo reale
-- Sostituire il testo "MORPH." con `<img>` del logo `intero.png` in entrambi i componenti
-- Dimensioni: ~140px wide in navbar, ~120px in footer
+Struttura:
 
-### 3. Forme decorative ispirate alla silhouette MW
-Le curve del logo MW sono archi fluidi che si incrociano formando una "M" e una "W" con tratti curvi. Attualmente ci sono cerchi (`geo-circle`) e linee verticali (`geo-line`).
+```text
+┌─────────────────────────────────────────────┐
+│  HERO BANNER (bg-foreground #0A2540)        │
+│  Titolo: "La Nostra Soluzione AI"           │
+│  Sottotitolo introduttivo                   │
+│  Cerchi/linee decorative accent             │
+├─────────────────────────────────────────────┤
+│  SEZIONE 1: COSA FACCIAMO (align LEFT)      │
+│  ┌──────────────┬──────────────┐            │
+│  │ Copy sx      │ Visual dx    │            │
+│  │ H1 + testo   │ (decorativo) │            │
+│  └──────────────┴──────────────┘            │
+│  bg: #F1F5F9                                │
+├─────────────────────────────────────────────┤
+│  SEZIONE 2: COME LO FACCIAMO (align RIGHT)  │
+│  ┌──────────────┬──────────────┐            │
+│  │ Visual sx    │ Copy dx      │            │
+│  │ (decorativo) │ H2 + testo   │            │
+│  └──────────────┴──────────────┘            │
+│  bg: #0A2540 (dark)                         │
+├─────────────────────────────────────────────┤
+│  SEZIONE 3: PERCHÉ LO FACCIAMO (align LEFT) │
+│  ┌──────────────┬──────────────┐            │
+│  │ Copy sx      │ Visual dx    │            │
+│  │ H2 + testo   │ (decorativo) │            │
+│  └──────────────┴──────────────┘            │
+│  bg: #F1F5F9                                │
+│  CTA "Prenota Adesso" → Calendly            │
+├─────────────────────────────────────────────┤
+```
 
-Sostituire con **curve SVG inline** che richiamano gli archi del logo:
-- Archi parabolici aperti (non cerchi chiusi)
-- Tratti curvi a S che ricordano le onde del logo
-- Stesse proprietà visive attuali: `border-2 border-accent`, opacity bassa (0.15-0.30), posizionamento assoluto
+**Dettagli stilistici:**
 
-Le forme saranno usate nella hero section e nella sezione WhatsApp form, nelle stesse posizioni dove ora ci sono i cerchi.
+- Elementi geometrici decorativi (cerchi border-accent, linee verticali) come nella home
+- Font Bodoni Moda per tutti i titoli, Inter per il body
+- Palette: primary #0A2540, accent #F59E0B, neutro #F1F5F9, nero #000000
+- Animazioni slide-up coerenti con la home
+- CTA con stile rounded-full bg-accent come nella home, testi "Inizia Ora" e "Prenota Adesso"
+- Sezioni alternate chiaro/scuro per ritmo visivo
+- Copy esattamente come fornito dall'utente
 
-### File modificati
-- `src/components/Navbar.tsx` — logo img
-- `src/components/Footer.tsx` — logo img
-- `src/pages/Index.tsx` — SVG decorativi al posto di geo-circle/geo-line
-- `src/index.css` — eventuale rimozione classi geo-circle/geo-line inutilizzate
+**3. Aggiornamento route (`src/App.tsx`)**
 
+- La route `/servizi` resta invariata, punta al componente rinominato internamente
