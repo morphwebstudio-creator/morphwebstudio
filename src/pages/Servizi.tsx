@@ -31,7 +31,7 @@ const Servizi = () => (
     </section>
 
     {/* SEZIONE 1 — Cosa Facciamo (LEFT, bg light) */}
-    <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-[#64748B] py-20 md:py-28 relative overflow-hidden">
       <div className="absolute right-[8%] top-[10%] w-[2px] h-24 bg-accent/15" />
       <div className="absolute -right-10 bottom-10 h-48 w-48 rounded-full border-2 border-accent/15" />
 
@@ -40,16 +40,16 @@ const Servizi = () => (
           {/* Copy — LEFT */}
           <div className="animate-slide-up">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4 block">Cosa Facciamo</span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-[#F1F5F9]">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-black">
               Siti Web AI-Powered per PMI e freelancer
             </h2>
-            <p className="mt-6 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-6 text-sm md:text-base leading-relaxed text-black/80">
               Creiamo siti web completamente funzionali in pochi giorni, usando un'intelligenza artificiale avanzata come Lovable.dev e hostati su Netlify.
             </p>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
               Il nostro servizio non offre vetrine statiche, ma piattaforme dinamiche con integrazione Calendly per prenotazioni automatizzate, SEO ottimizzata e strumenti pronti all'uso.
             </p>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
               Che tu abbia un e-commerce, una s.r.l., o sia un freelancer, noi di MorphWebStudio offriremo una soluzione adatta a te.
             </p>
             <div className="mt-8">
@@ -126,7 +126,7 @@ const Servizi = () => (
     </section>
 
     {/* SEZIONE 3 — Perché lo Facciamo (LEFT, bg light) */}
-    <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-[#64748B] py-20 md:py-28 relative overflow-hidden">
       <div className="absolute right-[12%] top-[8%] w-[2px] h-20 bg-accent/15" />
       <div className="absolute -right-8 top-20 h-44 w-44 rounded-full border-2 border-accent/15" />
 
@@ -135,19 +135,19 @@ const Servizi = () => (
           {/* Copy — LEFT */}
           <div className="animate-slide-up">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4 block">Perché lo Facciamo</span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-[#F1F5F9]">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-black">
               La Nostra Mission: democratizzare la digitalizzazione
             </h2>
-            <p className="mt-6 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-6 text-sm md:text-base leading-relaxed text-black/80">
               Crediamo che ogni PMI, libero professionista o piccolo imprenditore italiano meriti visibilità online senza barriere tecniche o costi proibitivi.
             </p>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
               La nostra vision: un ecosistema PMI connesse, sostenibili e competitive via AI, che si trasformano da invisibili a leader locali.
             </p>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#F1F5F9]/70">
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
               Lo facciamo perché l'80% delle PMI italiane manca di sito (dati ISTAT 2025), e l'AI è la leva democratica per colmare il gap digitale con prezzi fortemente competitivi e accessibili a chiunque.
             </p>
-            <p className="mt-4 text-sm md:text-base font-semibold leading-relaxed text-[#F1F5F9]">
+            <p className="mt-4 text-sm md:text-base font-semibold leading-relaxed text-black">
               Non siamo un'agency tradizionale, siamo il partner per la tua scalata.
             </p>
             <div className="mt-8">
