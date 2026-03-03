@@ -1,21 +1,19 @@
 
 
-## Piano: Fix copy e cambio background sezioni 1 e 3
-
-Il codice contiene già il copy corretto in entrambe le sezioni. Il problema visivo è probabilmente dovuto ai colori del testo che si confondono con lo sfondo. Le modifiche richieste risolveranno anche questo.
+## Piano: Cambiare sfondo sezioni 1 e 3 da nero a grigio
 
 ### Modifiche in `src/pages/Servizi.tsx`
 
 **Sezione 1 (Cosa Facciamo, riga 34):**
-- Background: da `bg-muted` a `bg-black`
-- Titolo H2 (riga 43): da `text-foreground` a `text-[#F1F5F9]`
-- Paragrafi (righe 46, 49, 52): da `text-muted-foreground` a `text-[#F1F5F9]/70`
+- Background: da `bg-black` a `bg-[#64748B]`
+- Titolo H2: da `text-[#F1F5F9]` a `text-black`
+- Paragrafi: da `text-[#F1F5F9]/70` a `text-black/80`
 
-**Sezione 3 (Perché lo Facciamo, riga 129):**
-- Background: da `bg-muted` a `bg-black`
-- Titolo H2 (riga 138): da `text-foreground` a `text-[#F1F5F9]`
-- Paragrafi (righe 141, 144, 147): da `text-muted-foreground` a `text-[#F1F5F9]/70`
-- Frase finale bold (riga 150): da `text-foreground` a `text-[#F1F5F9]`
+**Sezione 3 (Perché lo Facciamo, riga 128):**
+- Background: da `bg-black` a `bg-[#64748B]`
+- Titolo H2: da `text-[#F1F5F9]` a `text-black`
+- Paragrafi: da `text-[#F1F5F9]/70` a `text-black/80`
+- Frase finale bold: da `text-[#F1F5F9]` a `text-black`
 
-Le label accent ("Cosa Facciamo", "Perché lo Facciamo") restano `text-accent` come richiesto.
+Le label accent restano `text-accent`.
 
