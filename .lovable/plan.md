@@ -1,29 +1,23 @@
 
 
-## Piano: Applicare bold e aggiornare copy nelle 3 sezioni
+## Piano: Aggiornare la prima card progetto con il sito Elettricista
 
-Applicherò `<strong>` alle parole indicate con asterischi e aggiornerò il testo dove è stato rivisto.
+### Modifiche in `src/pages/Index.tsx`
 
-### Modifiche in `src/pages/Servizi.tsx`
+**Array `projects` (riga 6):**
+- Primo progetto: cambiare da "Da Mario" / "Ristorazione" a dati coerenti con il sito elettricista
+  - `name`: "Elettricista Rapido 24h"
+  - `sector`: "Servizi"
+  - `description`: "Sito vetrina con prenotazione interventi, certificazioni e disponibilità 24/7"
+  - `metric`: un dato demo coerente (es. "+50% chiamate")
+- Aggiungere campo `url` all'oggetto per linkare a `https://mariotorinoelettricista.lovable.app`
+- Aggiungere campo `image` con URL Unsplash di un elettricista al lavoro (es. quadro elettrico, impianto)
 
-**Sezione 1 (Cosa Facciamo):**
-- "completamente funzionali" → bold
-- "piattaforme dinamiche" → bold
-- "automatizzate" → bold
-- "soluzione adatta a te" → bold
-- Testo aggiornato (es. "un intelligenza" senza apostrofo, "Morphwebstudio" minuscolo)
+**Card nel grid (righe ~104-130):**
+- Rendere la card cliccabile: wrappare con `<a href={project.url} target="_blank">` se `url` è presente
+- Sostituire il placeholder visivo (attualmente solo testo su sfondo scuro) con un `<img>` che usa il campo `image`, con `object-cover` per riempire l'area
+- Mantenere il tag numerico e il cerchio decorativo sovrapposti all'immagine
 
-**Sezione 2 (Come lo Facciamo):**
-- "pulito" → bold, "moderni" → bold
-- "rapidità, estetica ed efficienza" → bold
-- "costi abbattuti dell'75%" → bold (cambiato da 75% e "dell'" )
-- "produttività" → bold
-- "chiavi in mano" → bold
-- Testo aggiornato (produttività "aumenta del 70%" invece di "si alza del 90%", rimosso "agency" con articolo diverso)
-
-**Sezione 3 (Perché lo Facciamo):**
-- "meriti visibilità" → bold
-- "sostenibili e competitive" → bold
-- "prezzi" → bold, "competitivi" → bold, "accessibili" → bold
-- Rimosso apostrofo da "un'agency" → "un agency"
+### Risultato
+La prima card mostrerà una foto di elettricista, il nome "Elettricista Rapido 24h", settore "Servizi", e cliccandoci si aprirà il sito demo in una nuova tab.
 
