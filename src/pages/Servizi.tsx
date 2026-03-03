@@ -44,13 +44,13 @@ const Servizi = () => (
               Siti Web AI-Powered per PMI e freelancer
             </h2>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-black/80">
-              Creiamo siti web completamente funzionali in pochi giorni, usando un'intelligenza artificiale avanzata come Lovable.dev e hostati su Netlify.
+              Creiamo siti web <strong>completamente funzionali</strong> in pochi giorni, usando un intelligenza artificiale avanzata come Lovable.dev e hostati su netlify.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
-              Il nostro servizio non offre vetrine statiche, ma piattaforme dinamiche con integrazione Calendly per prenotazioni automatizzate, SEO ottimizzata e strumenti pronti all'uso.
+              Il nostro servizio non offre vetrine statiche, ma <strong>piattaforme dinamiche</strong> con integrazione calendly per prenotazioni <strong>automatizzate</strong>, SEO ottimizzata e strumenti pronti all'uso.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
-              Che tu abbia un e-commerce, una s.r.l., o sia un freelancer, noi di MorphWebStudio offriremo una soluzione adatta a te.
+              Che tu abbia un e-commerce, una s.r.l., o sia un freelancer, noi di Morphwebstudio offriremo una <strong>soluzione adatta a te</strong>.
             </p>
             <div className="mt-8">
               <a
@@ -101,13 +101,13 @@ const Servizi = () => (
               Il Processo AI: Efficiente, Accattivante, Trasversale
             </h2>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-primary-foreground/60">
-              L'AI di Lovable.dev genera un codice pulito e design moderni via prompt naturali, che utilizzeremo da scheletro base per lo sviluppo effettivo del sito web.
+              L'AI di Lovable.dev genera un codice <strong>pulito</strong> e design <strong>moderni</strong> via prompt naturali, che utilizzeremo da scheletro base per lo sviluppo effettivo del sito web.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-primary-foreground/60">
-              La potenza di calcolo AI supera il lavoro umano in rapidità, estetica ed efficienza. Questo si traduce in costi abbattuti del 75%, permettendoci di lavorare a ritmi più alti rispetto a un'agency tradizionale, dove un team di sviluppatori deve manualmente strutturare da zero il codice di ogni singola pagina.
+              La potenza di calcolo AI supera il lavoro umano in <strong>rapidità, estetica ed efficienza</strong>. Questo si traduce in <strong>costi abbattuti dell'75%</strong>, permettendoci di lavorare a ritmi più alti rispetto a un agency tradizionale, dove un team di sviluppatori deve manualmente strutturare da zero il codice di ogni singola pagina.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-primary-foreground/60">
-              In questo modo la nostra produttività si alza del 90%, dandoci la possibilità di offrire un sito completamente funzionante, "chiavi in mano" dopo solo pochi giorni.
+              In questo modo la nostra <strong>produttività</strong> aumenta del 70%, dandoci la possibilità di offrire un sito completamente funzionante, <strong>"chiavi in mano"</strong> dopo solo pochi giorni.
             </p>
             <div className="mt-8">
               <a
@@ -139,16 +139,16 @@ const Servizi = () => (
               La Nostra Mission: democratizzare la digitalizzazione
             </h2>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-black/80">
-              Crediamo che ogni PMI, libero professionista o piccolo imprenditore italiano meriti visibilità online senza barriere tecniche o costi proibitivi.
+              Crediamo che ogni PMI, libero professionista o piccolo imprenditore italiano <strong>meriti visibilità</strong> online senza barriere tecniche o costi proibitivi.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
-              La nostra vision: un ecosistema PMI connesse, sostenibili e competitive via AI, che si trasformano da invisibili a leader locali.
+              La nostra vision: un ecosistema PMI connesse, <strong>sostenibili e competitive</strong> via AI, che si trasformano da invisibili a leader locali.
             </p>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-black/80">
-              Lo facciamo perché l'80% delle PMI italiane manca di sito (dati ISTAT 2025), e l'AI è la leva democratica per colmare il gap digitale con prezzi fortemente competitivi e accessibili a chiunque.
+              Lo facciamo perché l'80% delle PMI italiane manca di sito (dati ISTAT 2025), e l'AI è la leva democratica per colmare il gap digitale con <strong>prezzi</strong> fortemente <strong>competitivi</strong> e <strong>accessibili</strong> a chiunque.
             </p>
             <p className="mt-4 text-sm md:text-base font-semibold leading-relaxed text-black">
-              Non siamo un'agency tradizionale, siamo il partner per la tua scalata.
+              Non siamo un agency tradizionale, siamo il partner per la tua scalata.
             </p>
             <div className="mt-8">
               <a
