@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Mail, ArrowUpRight } from "lucide-react";
 
 const projects = [
-  { id: 1, name: "Da Mario", sector: "Ristorazione", tag: "01", description: "Menù digitale e prenotazioni online per pizzeria artigianale", metric: "+45% prenotazioni" },
-  { id: 2, name: "Bottega Rossi", sector: "Artigianato", tag: "02", description: "Portfolio lavori con galleria e richiesta preventivi", metric: "+30% lead" },
-  { id: 3, name: "Moda Bella", sector: "Retail", tag: "03", description: "E-commerce Shopify con catalogo e pagamenti online", metric: "+60% vendite" },
+  { id: 1, name: "Elettricista Rapido 24h", sector: "Servizi", tag: "01", description: "Sito vetrina con prenotazione interventi, certificazioni e disponibilità 24/7", metric: "+50% chiamate", url: "https://mariotorinoelettricista.lovable.app", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" },
+  { id: 2, name: "Bottega Rossi", sector: "Artigianato", tag: "02", description: "Portfolio lavori con galleria e richiesta preventivi", metric: "+30% lead", url: "", image: "" },
+  { id: 3, name: "Moda Bella", sector: "Retail", tag: "03", description: "E-commerce Shopify con catalogo e pagamenti online", metric: "+60% vendite", url: "", image: "" },
 ];
 
 const Index = () => {
@@ -104,40 +104,48 @@ const Index = () => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((project, i) => (
-              <div
-                key={project.id}
-                className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-accent/50 hover:shadow-xl animate-slide-up"
-                style={{ animationDelay: `${0.1 * i}s` }}
-              >
-                {/* Image placeholder with tag */}
-                <div className="relative h-52 bg-foreground flex items-center justify-center overflow-hidden">
-                  <span className="absolute top-4 left-4 font-serif text-5xl font-black text-primary-foreground/10">
-                    {project.tag}
-                  </span>
-                  <span className="font-serif text-xl font-bold text-primary-foreground/30">{project.name}</span>
-                  {/* Geometric accent */}
-                  <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full border-2 border-accent/30 transition-transform group-hover:scale-110" />
-                </div>
-                
-                <div className="p-5">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium uppercase tracking-widest text-accent">
-                      {project.sector}
+            {projects.map((project, i) => {
+              const Wrapper = project.url ? "a" : "div";
+              const wrapperProps = project.url ? { href: project.url, target: "_blank", rel: "noopener noreferrer" } : {};
+              return (
+                <Wrapper
+                  key={project.id}
+                  {...wrapperProps}
+                  className="group relative overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-accent/50 hover:shadow-xl animate-slide-up block"
+                  style={{ animationDelay: `${0.1 * i}s` }}
+                >
+                  {/* Image / placeholder with tag */}
+                  <div className="relative h-52 bg-foreground flex items-center justify-center overflow-hidden">
+                    {project.image ? (
+                      <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover" />
+                    ) : (
+                      <span className="font-serif text-xl font-bold text-primary-foreground/30">{project.name}</span>
+                    )}
+                    <span className="absolute top-4 left-4 font-serif text-5xl font-black text-primary-foreground/10">
+                      {project.tag}
                     </span>
-                    <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                    <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full border-2 border-accent/30 transition-transform group-hover:scale-110" />
                   </div>
-                  <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
-                    {project.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-                  <div className="mt-4 flex items-center gap-2 border-t border-border pt-3">
-                    <span className="h-2 w-2 rounded-full bg-accent" />
-                    <span className="text-sm font-semibold text-foreground">{project.metric}</span>
+
+                  <div className="p-5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium uppercase tracking-widest text-accent">
+                        {project.sector}
+                      </span>
+                      <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
+                    </div>
+                    <h3 className="mt-2 font-serif text-lg font-bold text-foreground">
+                      {project.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                    <div className="mt-4 flex items-center gap-2 border-t border-border pt-3">
+                      <span className="h-2 w-2 rounded-full bg-accent" />
+                      <span className="text-sm font-semibold text-foreground">{project.metric}</span>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Wrapper>
+              );
+            })}
           </div>
 
           <div className="mt-8 text-center md:hidden">
