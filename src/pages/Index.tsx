@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, MessageCircle, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Mail, ArrowUpRight } from "lucide-react";
 
 const projects = [
   { id: 1, name: "Da Mario", sector: "Ristorazione", tag: "01", description: "Menù digitale e prenotazioni online per pizzeria artigianale", metric: "+45% prenotazioni" },
@@ -9,7 +9,7 @@ const projects = [
 ];
 
 const Index = () => {
-  const whatsappLink = "https://wa.me/393000000000?text=Ciao%2C%20vorrei%20un%20preventivo%20per%20un%20sito%20web";
+  
 
   return (
     <Layout>
@@ -168,17 +168,6 @@ const Index = () => {
             <p className="mt-6 text-sm md:text-base text-[#000000] leading-relaxed max-w-md">
               Prenota una chiamata gratuita di 15 minuti. Analizzeremo insieme le tue esigenze e ti proporremo la soluzione migliore per il tuo business.
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Oppure scrivici su WhatsApp
-              </a>
-            </div>
           </div>
 
           {/* Right — Calendly embed */}
