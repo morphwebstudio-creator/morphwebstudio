@@ -1,57 +1,21 @@
-## Piano: Sostituire "Servizi" con "La Nostra Soluzione AI"
 
-### Modifiche
 
-**1. Navbar (`src/components/Navbar.tsx`)**
+## Piano: Fix copy e cambio background sezioni 1 e 3
 
-- Cambiare label da "Servizi" a ""Soluzione AI" 
+Il codice contiene già il copy corretto in entrambe le sezioni. Il problema visivo è probabilmente dovuto ai colori del testo che si confondono con lo sfondo. Le modifiche richieste risolveranno anche questo.
 
-**2. Pagina Servizi → Soluzione AI (`src/pages/Servizi.tsx`)**
-Riscrittura completa con tre sezioni alternate (sinistra-destra-sinistra), elementi decorativi geometrici coerenti con la home (cerchi, linee accent), e CTA Calendly.
+### Modifiche in `src/pages/Servizi.tsx`
 
-Struttura:
+**Sezione 1 (Cosa Facciamo, riga 34):**
+- Background: da `bg-muted` a `bg-black`
+- Titolo H2 (riga 43): da `text-foreground` a `text-[#F1F5F9]`
+- Paragrafi (righe 46, 49, 52): da `text-muted-foreground` a `text-[#F1F5F9]/70`
 
-```text
-┌─────────────────────────────────────────────┐
-│  HERO BANNER (bg-foreground #0A2540)        │
-│  Titolo: "La Nostra Soluzione AI"           │
-│  Sottotitolo introduttivo                   │
-│  Cerchi/linee decorative accent             │
-├─────────────────────────────────────────────┤
-│  SEZIONE 1: COSA FACCIAMO (align LEFT)      │
-│  ┌──────────────┬──────────────┐            │
-│  │ Copy sx      │ Visual dx    │            │
-│  │ H1 + testo   │ (decorativo) │            │
-│  └──────────────┴──────────────┘            │
-│  bg: #F1F5F9                                │
-├─────────────────────────────────────────────┤
-│  SEZIONE 2: COME LO FACCIAMO (align RIGHT)  │
-│  ┌──────────────┬──────────────┐            │
-│  │ Visual sx    │ Copy dx      │            │
-│  │ (decorativo) │ H2 + testo   │            │
-│  └──────────────┴──────────────┘            │
-│  bg: #0A2540 (dark)                         │
-├─────────────────────────────────────────────┤
-│  SEZIONE 3: PERCHÉ LO FACCIAMO (align LEFT) │
-│  ┌──────────────┬──────────────┐            │
-│  │ Copy sx      │ Visual dx    │            │
-│  │ H2 + testo   │ (decorativo) │            │
-│  └──────────────┴──────────────┘            │
-│  bg: #F1F5F9                                │
-│  CTA "Prenota Adesso" → Calendly            │
-├─────────────────────────────────────────────┤
-```
+**Sezione 3 (Perché lo Facciamo, riga 129):**
+- Background: da `bg-muted` a `bg-black`
+- Titolo H2 (riga 138): da `text-foreground` a `text-[#F1F5F9]`
+- Paragrafi (righe 141, 144, 147): da `text-muted-foreground` a `text-[#F1F5F9]/70`
+- Frase finale bold (riga 150): da `text-foreground` a `text-[#F1F5F9]`
 
-**Dettagli stilistici:**
+Le label accent ("Cosa Facciamo", "Perché lo Facciamo") restano `text-accent` come richiesto.
 
-- Elementi geometrici decorativi (cerchi border-accent, linee verticali) come nella home
-- Font Bodoni Moda per tutti i titoli, Inter per il body
-- Palette: primary #0A2540, accent #F59E0B, neutro #F1F5F9, nero #000000
-- Animazioni slide-up coerenti con la home
-- CTA con stile rounded-full bg-accent come nella home, testi "Inizia Ora" e "Prenota Adesso"
-- Sezioni alternate chiaro/scuro per ritmo visivo
-- Copy esattamente come fornito dall'utente
-
-**3. Aggiornamento route (`src/App.tsx`)**
-
-- La route `/servizi` resta invariata, punta al componente rinominato internamente
