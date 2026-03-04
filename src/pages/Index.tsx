@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 const Index = () => {
-  
+
 
   return (
     <Layout>
@@ -48,15 +48,15 @@ const Index = () => {
                 href="https://calendly.com/morphwebstudio/new-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-105"
-              >
+                className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-all hover:scale-105">
+                
                 Preventivo
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="mailto:morphwebstudio@gmail.com"
-                className="inline-flex h-11 items-center gap-2 rounded-full border border-primary-foreground/20 px-7 text-sm font-medium text-primary-foreground/70 transition-all hover:border-accent hover:text-accent"
-              >
+                className="inline-flex h-11 items-center gap-2 rounded-full border border-primary-foreground/20 px-7 text-sm font-medium text-primary-foreground/70 transition-all hover:border-accent hover:text-accent">
+                
                 <Mail className="h-4 w-4" />
                 Email
               </a>
@@ -71,7 +71,7 @@ const Index = () => {
             </div>
             <div>
               <span className="text-xs uppercase tracking-widest text-primary-foreground/30">A partire da</span>
-              <p className="mt-1 font-serif text-lg font-bold text-accent">1.000€</p>
+              <p className="mt-1 font-serif text-lg font-bold text-accent">999€</p>
             </div>
             <div>
               <span className="text-xs uppercase tracking-widest text-primary-foreground/30">Clienti</span>
@@ -93,23 +93,23 @@ const Index = () => {
             </div>
             <Link
               to="/progetti"
-              className="hidden md:inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
-            >
+              className="hidden md:inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent">
+              
               Tutti i progetti <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
+            {projects.map((project, i) =>
+            <ProjectCard key={project.id} project={project} index={i} />
+            )}
           </div>
 
           <div className="mt-8 text-center md:hidden">
             <Link
               to="/progetti"
-              className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-accent"
-            >
+              className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-accent">
+              
               Tutti i progetti <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
@@ -148,14 +148,14 @@ const Index = () => {
                 height="580"
                 frameBorder="0"
                 title="Prenota una call"
-                className="w-full"
-              />
+                className="w-full" />
+              
             </div>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Index;
