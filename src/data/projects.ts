@@ -32,12 +32,12 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    name: "Moda Bella",
-    sector: "Retail",
+    name: "Smile Torino",
+    sector: "Odontoiatria",
     tag: "03",
-    description: "E-commerce Shopify con catalogo e pagamenti online",
-    metric: "+60% vendite",
-    url: "",
-    image: "",
+    description: "Sito vetrina per studio dentistico con prenotazioni, servizi e team medico",
+    metric: "+45% prenotazioni",
+    url: "https://smiletorino.lovable.app",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80",
   },
 ];
