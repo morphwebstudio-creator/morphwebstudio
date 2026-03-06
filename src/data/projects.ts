@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description: "Sito vetrina con prenotazione interventi, certificazioni e disponibilità 24/7",
     metric: "+50% chiamate",
     url: "https://mariotorinoelettricista.lovable.app",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80",
   },
   {
     id: 2,
@@ -39,5 +39,15 @@ export const projects: Project[] = [
     metric: "+45% prenotazioni",
     url: "https://smiletorino.lovable.app",
     image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80",
+  },
+  {
+    id: 4,
+    name: "Torino Paint Wizard",
+    sector: "Imbianchino",
+    tag: "04",
+    description: "Sito vetrina per servizi di tinteggiatura con preventivi, galleria lavori e recensioni",
+    metric: "+35% richieste",
+    url: "https://torino-paint-wizard.lovable.app",
+    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80",
   },
 ];

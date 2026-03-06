@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Mail } from "lucide-react";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const Index = () => {
 
@@ -99,11 +100,17 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((project, i) =>
-            <ProjectCard key={project.id} project={project} index={i} />
-            )}
-          </div>
+          <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {projects.map((project) => (
+                <CarouselItem key={project.id} className="pl-4 basis-full md:basis-1/3">
+                  <ProjectCard project={project} index={0} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 md:-left-5" />
+            <CarouselNext className="-right-4 md:-right-5" />
+          </Carousel>
 
           <div className="mt-8 text-center md:hidden">
             <Link
