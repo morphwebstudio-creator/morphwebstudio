@@ -1,29 +1,25 @@
 
 
-## Piano: 3 modifiche alla sezione Progetti
+## Piano: Aggiornare copertine e aggiungere progetto Idraulico
 
-### 1. Cambiare immagine copertina Elettricista (`src/data/projects.ts`)
-Sostituire l'immagine Unsplash attuale con una che ritragga un elettricista caucasico (es. `photo-1621905252507-b35492cc74b4` o simile con soggetto bianco/caucasico al lavoro su impianto elettrico).
+### 1. Copiare le 3 immagini in `src/assets/`
+- `pexels-gustavo-fring-6720530.jpg` → copertina Elettricista
+- `pexels-shkrabaanthony-4981797.jpg` → copertina Torino Paint Wizard
+- `pexels-declan-wright-1933616497-28806925.jpg` → copertina nuovo progetto Idraulico
 
-### 2. Aggiungere 4° progetto Imbianchino (`src/data/projects.ts`)
-Nuovo entry:
-- name: "Torino Paint Wizard"
-- sector: "Imbianchino"
-- tag: "04"
-- description: "Sito vetrina per servizi di tinteggiatura con preventivi, galleria lavori e recensioni"
-- metric: "+35% richieste"
-- url: `https://torino-paint-wizard.lovable.app`
-- image: Unsplash di imbianchino/pittore edile al lavoro
-
-### 3. Carousel scorrevole nella Home (`src/pages/Index.tsx`)
-Sostituire la griglia `md:grid-cols-3` nella sezione Portfolio con un carousel Embla (componenti `Carousel`, `CarouselContent`, `CarouselItem` già disponibili in `src/components/ui/carousel.tsx`):
-- Ogni slide mostra una `ProjectCard`
-- Su desktop: mostrare ~3 card visibili contemporaneamente (`basis-1/3`)
-- Su mobile: 1 card per volta
-- Frecce prev/next e loop attivo
-- Rimuovere l'animazione `animate-slide-up` dalle singole card dentro il carousel (conflitto)
+### 2. Aggiornare `src/data/projects.ts`
+- Convertire il file per importare le immagini come moduli ES6 (`import elettricistaImg from "@/assets/..."`)
+- Sostituire l'URL Unsplash dell'Elettricista con l'immagine caricata
+- Sostituire l'URL Unsplash di Torino Paint Wizard con l'immagine caricata
+- Aggiungere 5° progetto:
+  - name: "Pronto Idraulico TO"
+  - sector: "Idraulica"
+  - tag: "05"
+  - description: "Sito vetrina per servizio idraulico con interventi urgenti, preventivi e assistenza 24h"
+  - metric: "+40% interventi"
+  - url: `https://pronto-idraulico-to.lovable.app`
+  - image: immagine caricata (tubi/impianti)
 
 ### File modificati
-- `src/data/projects.ts` — immagine elettricista + nuovo progetto imbianchino
-- `src/pages/Index.tsx` — carousel al posto della griglia
+- `src/data/projects.ts` — import immagini locali, aggiornamento copertine, nuovo progetto
 
