@@ -1,6 +1,7 @@
 import elettricistaImg from "@/assets/pexels-gustavo-fring-6720530.jpg";
 import paintWizardImg from "@/assets/pexels-shkrabaanthony-4981797.jpg";
 import idraulicoImg from "@/assets/pexels-declan-wright-1933616497-28806925.jpg";
+import aircutImg from "@/assets/aircut-torino-style.jpg";
 
 export interface Project {
   id: number;
@@ -72,6 +73,6 @@ export const projects: Project[] = [
     description: "Sito vetrina per salone di parrucchiere con prenotazioni online, gallery e trend 2026",
     metric: "+45% prenotazioni",
     url: "https://aircut-torino-style.lovable.app",
-    image: "https://images.unsplash.com/photo-1585747860019-f4e64de4ceb4?w=600&q=80",
+    image: aircutImg,
   },
 ];
