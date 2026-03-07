@@ -1,6 +1,7 @@
 import elettricistaImg from "@/assets/pexels-gustavo-fring-6720530.jpg";
 import paintWizardImg from "@/assets/pexels-shkrabaanthony-4981797.jpg";
 import idraulicoImg from "@/assets/pexels-declan-wright-1933616497-28806925.jpg";
+import aircutImg from "@/assets/aircut-torino-style.jpg";
 
 export interface Project {
   id: number;
