@@ -64,4 +64,14 @@ export const projects: Project[] = [
     url: "https://pronto-idraulico-to.lovable.app",
     image: idraulicoImg,
   },
+  {
+    id: 6,
+    name: "AirCut Torino Style",
+    sector: "Parrucchiere",
+    tag: "06",
+    description: "Sito vetrina per salone di parrucchiere con prenotazioni online, gallery e trend 2026",
+    metric: "+45% prenotazioni",
+    url: "https://aircut-torino-style.lovable.app",
+    image: "https://images.unsplash.com/photo-1585747860019-f4e64de4ceb4?w=600&q=80",
+  },
 ];
